@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV | Rameez Raja</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #24292e;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #0366d6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .pdf-link {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f6f8fa;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #586069;
+        }
+        .pdf-link a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .pdf-link a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+        .contact-info {
+            text-align: center;
+            color: #586069;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .contact-info a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            border-bottom: 2px solid #0366d6;
+            padding-bottom: 8px;
+            margin: 30px 0 20px 0;
+            color: #24292e;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+        }
+        .job {
+            margin-bottom: 25px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .job-title {
+            font-weight: 600;
+            color: #24292e;
+        }
+        .job-date {
+            color: #586069;
+            font-size: 14px;
+        }
+        .job-company {
+            color: #586069;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .job ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .job li {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #24292e;
+        }
+        .job li em {
+            font-style: italic;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+        .skill-category {
+            font-weight: 600;
+            color: #24292e;
+        }
+        .skill-items {
+            color: #586069;
+        }
+        .certs {
+            font-size: 14px;
+            color: #586069;
+        }
+        .education-item {
+            margin-bottom: 15px;
+        }
+        .education-item h3 {
+            margin-bottom: 3px;
+        }
+        .education-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #586069;
+        }
+        .interests {
+            font-size: 14px;
+            color: #586069;
+        }
+        .highlight-action {
+            background: #ddf4ff;
+            color: #0969da;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        .highlight-result {
+            background: #dafbe1;
+            color: #1a7f37;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            .job-header {
+                flex-direction: column;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="pdf-link">
+            A condensed 2-page PDF version can be found <a href="Rameez_Raja_CV.pdf">here</a>
+        </div>
+        
+        <h1>Rameez Raja</h1>
+        <div class="contact-info">
+            London, UK · +44 7830 533573 · <a href="mailto:data.rameez.raja@gmail.com">data.rameez.raja@gmail.com</a> · <a href="https://linkedin.com/in/rameezraja">LinkedIn</a>
+        </div>
+
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <span class="skill-category">ML</span>
+            <span class="skill-items">Python, Scikit-learn, XGBoost, LightGBM, PyTorch, TensorFlow, NLP, GPT-3.5, BART, Transformers, Prompt Engineering, MLflow</span>
+            
+            <span class="skill-category">Data Engineering</span>
+            <span class="skill-items">SQL, dbt, Apache Airflow, Apache Kafka, Apache Spark, SnapLogic, Alteryx, ETL/ELT Pipelines</span>
+            
+            <span class="skill-category">Cloud</span>
+            <span class="skill-items">AWS (Redshift, S3, Glue, Athena), Azure (SQL Database, Data Lake, Data Factory), GCP, Oracle, PostgreSQL</span>
+            
+            <span class="skill-category">BI & Tools</span>
+            <span class="skill-items">Tableau, Power BI, Streamlit, Git, Docker, Jira, ServiceNow, OpenMetadata</span>
+        </div>
+
+        <h2>Experience <span style="font-size: 12px; font-weight: 400; margin-left: 15px;"><span class="highlight-action">Action/Skill</span> <span class="highlight-result">Result/Impact</span></span></h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Data Engineer / Analyst</span>
+                <span class="job-date">Jan 2024 - Feb 2026</span>
+            </div>
+            <div class="job-company">Abcam (Danaher Corporation) · Cambridge, UK (Hybrid, 2-3 days in office)</div>
+            <ul>
+                <li><em>Built enterprise data catalogue</em> - <span class="highlight-action">ingested 200+ Oracle tables and 60 Tableau dashboards</span> into OpenMetadata, <span class="highlight-result">integrated AI Copilot for glossary definitions at scale</span>.</li>
+                <li><em>Implemented quarterly audit checks and full lineage</em> - <span class="highlight-result">users trace any metric back to source in seconds</span>, eliminated tribal knowledge.</li>
+                <li><em>Migrated Oracle warehouse to Redshift</em> - <span class="highlight-action">rebuilt core tables as dbt models</span> with dev/prod separation, <span class="highlight-result">queries now run in seconds</span>.</li>
+                <li><em>Delivered 5 pipelines using SnapLogic</em> - <span class="highlight-result">cut ETL turnaround from days to hours</span>. <span class="highlight-action">Trained 1,500+ employees</span> on Tableau.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Data Analytics Engineer</span>
+                <span class="job-date">Jun 2024 - Jan 2025</span>
+            </div>
+            <div class="job-company">Danaher Corporation (Abcam OpCo) · Cambridge, UK (Hybrid, 2-3 days in office)</div>
+            <ul>
+                <li><em>Led data migration from Abcam on-premise to Danaher tenant</em> - <span class="highlight-action">validated integrity across critical business tables</span>.</li>
+                <li><em>Built SnapLogic pipelines</em> - <span class="highlight-action">connected Oracle, Salesforce, SharePoint to data lake</span>. <span class="highlight-result">Trained 500+ users on self-serve analytics</span>.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Business Intelligence Engineer</span>
+                <span class="job-date">Oct 2021 - Sep 2023</span>
+            </div>
+            <div class="job-company">Citi - Global People Analytics · London, UK (Hybrid, 2-3 days in office)</div>
+            <ul>
+                <li><em>Sole owner of TA analytics</em> - <span class="highlight-action">built entire reporting infrastructure</span>, <span class="highlight-result">automated processes saving 10+ hours weekly</span>.</li>
+                <li><em>Developed ETL from Workday API</em> - <span class="highlight-action">designed Power BI dashboards</span> showing EMEA missing hiring targets, <span class="highlight-result">drove corrective action</span>.</li>
+                <li><em>Built audit-ready reporting for regulatory compliance</em> - <span class="highlight-action">tracked diversity metrics</span>, <span class="highlight-result">flagged KPIs at risk of regulator scrutiny</span>.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Data Analyst</span>
+                <span class="job-date">Sep 2019 - Jul 2021</span>
+            </div>
+            <div class="job-company">Citi - Markets and Front Office · Belfast / London, UK (Hybrid and Remote, COVID)</div>
+            <ul>
+                <li><em>Automated contract drafting using Exari with PwC</em> - <span class="highlight-result">reduced turnaround from days to hours</span>.</li>
+                <li><em>Implemented SEAL ML algorithm for contract analysis</em> - <span class="highlight-result">saved 30+ hours of legal review weekly</span>.</li>
+                <li><em>Conducted data mappings for regulatory reporting</em> - <span class="highlight-action">EMIR, Dodd-Frank, MiFID</span>. <span class="highlight-result">3x Citi Gold Gratitude Awards</span>.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Data Analyst</span>
+                <span class="job-date">Aug 2018 - Aug 2019</span>
+            </div>
+            <div class="job-company">Citi - Private Banking, Office of Client Experience · New York, USA (Full Time, In Person)</div>
+            <ul>
+                <li><em>Built Azure pipelines</em> - <span class="highlight-action">extracted from Salesforce CRM and MS Access to Azure SQL Database</span>.</li>
+                <li><em>Developed Power BI dashboards with row-level security</em> - <span class="highlight-result">cut client onboarding time by 40%</span>.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Business Analyst</span>
+                <span class="job-date">Feb 2014 - Aug 2018</span>
+            </div>
+            <div class="job-company">DLL Group (Rabobank OpCo) - Vendor Finance · Watford, UK (Full Time, In Person)</div>
+            <ul>
+                <li><em>Established Power BI scorecards</em> - <span class="highlight-result">adopted globally across EMEA, APAC, Americas</span>. <span class="highlight-action">Coordinated 20+ app releases</span>.</li>
+                <li><em>Analysed profitability across 20+ vendor partners</em> - <span class="highlight-action">Tesla, Microsoft</span> - <span class="highlight-result">methodology adopted globally</span>.</li>
+                <li><em>Identified cost-saving opportunity</em> - <span class="highlight-result">saved GBP 250,000</span>. <span class="highlight-result">Employee of the Year 2015</span>.</li>
+            </ul>
+        </div>
+
+        <h2>Positions of Responsibility</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Machine Learning Researcher (Part-Time)</span>
+                <span class="job-date">Feb 2026 - Present</span>
+            </div>
+            <div class="job-company">University of Warwick - Predictive Modelling Centre · Coventry, UK</div>
+            <ul>
+                <li><em>Conducting original ML research</em> - <span class="highlight-action">benchmarking XGBoost, LightGBM, neural networks</span> on time-series forecasting problems.</li>
+                <li><em>Presenting research findings</em> - <span class="highlight-action">model interpretability and complexity vs explainability trade-offs</span>.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">ML Engineer (NLP / Legislative Intelligence)</span>
+                <span class="job-date">Feb 2025 - Jul 2025</span>
+            </div>
+            <div class="job-company">Integrity Institute · San Francisco, USA (Remote)</div>
+            <ul>
+                <li><em>Built NLP pipeline using GPT-3.5 and BART transformers</em> - <span class="highlight-result">cut document processing from hours to minutes</span>.</li>
+                <li><em>Engineered 13+ Python scripts for API ingestion</em> - <span class="highlight-action">fine-tuned BART achieving higher ROUGE scores</span>. <span class="highlight-result">Documented 50+ pages of ML workflows</span>.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Visualisation Lead</span>
+                <span class="job-date">Jun 2024 - Jan 2025</span>
+            </div>
+            <div class="job-company">Abcam (Danaher Corporation) · Cambridge, UK (Hybrid, 2-3 days in office)</div>
+            <ul>
+                <li><em>Led data visualisation training for Life Sciences teams</em> - <span class="highlight-action">delivered to 1,500+ employees</span>, <span class="highlight-result">created style guides and templates</span>.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Change Champion</span>
+                <span class="job-date">Nov 2019 - Nov 2022</span>
+            </div>
+            <div class="job-company">Citi · Belfast / London, UK</div>
+            <ul>
+                <li><em>Drove organisational transformation</em> - <span class="highlight-action">led technology adoption during major migrations</span>, <span class="highlight-result">built network of change advocates</span>.</li>
+            </ul>
+        </div>
+
+        <h2>Certifications</h2>
+        <p class="certs">Alteryx Designer Core · Tableau Desktop Specialist · Microsoft Power BI Data Analyst Associate · AWS Certified Cloud Practitioner · AWS Certified Data Analytics - Specialty · Google Cloud Professional Data Engineer</p>
+
+        <h2>Education</h2>
+        
+        <div class="education-item">
+            <h3>MSc Predictive Modelling & Scientific Computing</h3>
+            <p>University of Warwick · Sep 2024 - Sep 2025</p>
+            <p>Machine Learning, Statistical Modelling, Python, Data Science</p>
+        </div>
+        
+        <div class="education-item">
+            <h3>MSc Business Analytics</h3>
+            <p>University College London (UCL) · 2015 - 2017</p>
+            <p>Statistical Methods, Time Series Analysis, Computational Statistics, R</p>
+        </div>
+        
+        <div class="education-item">
+            <h3>BSc Business Analysis</h3>
+            <p>Queen Mary University of London · 2010 - 2013</p>
+        </div>
+
+        <h2>Interests</h2>
+        <p class="interests">Travelling (46+ countries, 23 US states), Sports (football, running, gym), Private Pilot License (PPL) - currently completing flight training.</p>
+
+    </div>
+</body>
+</html>

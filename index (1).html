@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rameez Raja | Data Engineering & Machine Learning</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #24292e;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        header {
+            width: 280px;
+            padding-right: 40px;
+            position: sticky;
+            top: 40px;
+            align-self: flex-start;
+        }
+        header img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 1px solid #e1e4e8;
+        }
+        header h1 {
+            font-size: 26px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        header h1 a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        header h1 a:hover {
+            text-decoration: underline;
+        }
+        header p {
+            color: #586069;
+            font-size: 14px;
+            margin: 0 0 15px 0;
+        }
+        header a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .nav-links {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e4e8;
+        }
+        .nav-links a {
+            display: block;
+            padding: 8px 0;
+            color: #0366d6;
+            font-size: 14px;
+        }
+        section {
+            flex: 1;
+            min-width: 0;
+            max-width: 800px;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 10px;
+            margin: 0 0 20px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+        h3 a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        h3 a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin: 0 0 16px 0;
+            color: #24292e;
+        }
+        .project {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        .project:last-child {
+            border-bottom: none;
+        }
+        .project-description {
+            color: #586069;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .badges {
+            margin: 10px 0;
+        }
+        .badges img {
+            height: 22px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+            vertical-align: middle;
+        }
+        .project-tags {
+            margin: 10px 0;
+        }
+        .project-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        .tag-de { background: #ddf4ff; color: #0969da; }
+        .tag-aws { background: #fff8c5; color: #9a6700; }
+        .tag-azure { background: #dafbe1; color: #1a7f37; }
+        .tag-gcp { background: #ffebe9; color: #cf222e; }
+        .tag-docker { background: #fbefff; color: #8250df; }
+        .tag-k8s { background: #ddf4ff; color: #0550ae; }
+        .tag-snowflake { background: #eef1f6; color: #3949ab; }
+        .view-code {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0366d6;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .view-code:hover {
+            text-decoration: underline;
+        }
+        .intro-text {
+            font-size: 15px;
+            color: #586069;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #e1e4e8;
+            margin: 30px 0;
+        }
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; padding: 20px; }
+            header { width: 100%; position: static; padding-right: 0; margin-bottom: 30px; text-align: center; }
+            section { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="images/linkedin.jpg" alt="Rameez Raja">
+            <h1><a href="https://rameezraja.github.io/">Rameez Raja</a></h1>
+            <p>Data Engineer & ML Practitioner with 10+ years in banking, life sciences, and civic tech. Two masters degrees in statistics and predictive modelling. Building skills through hands-on projects.</p>
+            <p>Currently: ML Researcher at University of Warwick</p>
+            <div class="nav-links">
+                <a href="https://www.linkedin.com/in/rameezraja/">View my LinkedIn Profile</a>
+                <a href="cv.html">View my CV</a>
+                <a href="research.html">View my Learning Blog</a>
+            </div>
+        </header>
+        
+        <section>
+            <p class="intro-text">Let me show you how one question changed everything. I was an Operations Analyst asking "why does this take so long?" That curiosity pulled me into automation, then data pipelines, then a decade of building systems across banking in New York and Dubai, life sciences in Cambridge, and civic tech in San Francisco.</p>
+
+            <h2>Learning Portfolio</h2>
+            <p class="intro-text">Selected projects in data engineering, streaming systems, and cloud platforms.</p>
+
+            <!-- Project 1 -->
+            <div class="project">
+                <h3>Real-time Data Streaming Pipeline</h3>
+                <p class="project-description">End-to-end pipeline that ingests user data from an API, streams through Kafka, processes with Spark, and stores in Cassandra. Everything containerised in Docker.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/Cassandra-white?logo=apachecassandra&logoColor=1287B1" alt="Cassandra">
+                </div>
+                <a href="https://github.com/rameezraja/e2e-data-engineering" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <h3>Reddit ETL Pipeline to AWS Redshift</h3>
+                <p class="project-description">Extracts data from Reddit's API, transforms it, and loads into Redshift data warehouse. Uses AWS managed services for a fully cloud-native pipeline.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-aws">AWS</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/S3-white?logo=amazons3&logoColor=569A31" alt="S3">
+                    <img src="https://img.shields.io/badge/Glue-white?logo=amazonaws&logoColor=FF9900" alt="Glue">
+                    <img src="https://img.shields.io/badge/Redshift-white?logo=amazonredshift&logoColor=8C4FFF" alt="Redshift">
+                </div>
+                <a href="https://github.com/rameezraja/RedditDataEngineering" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <h3>Real-time Election Voting System</h3>
+                <p class="project-description">Real-time voting system that processes election votes as they come in, aggregates results with Spark Streaming, and displays live dashboards with Streamlit.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/PostgreSQL-white?logo=postgresql&logoColor=4169E1" alt="PostgreSQL">
+                    <img src="https://img.shields.io/badge/Streamlit-white?logo=streamlit&logoColor=FF4B4B" alt="Streamlit">
+                </div>
+                <a href="https://github.com/rameezraja/realtime-voting-data-engineering" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project">
+                <h3>Real-time Streaming with OpenAI LLM</h3>
+                <p class="project-description">Streams data via TCP/IP sockets, processes with Spark, enriches using OpenAI's LLM, and indexes results in Elasticsearch for search and analytics.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/OpenAI-white?logo=openai&logoColor=412991" alt="OpenAI">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Elasticsearch-white?logo=elasticsearch&logoColor=005571" alt="ES">
+                </div>
+                <a href="https://github.com/rameezraja/realtime-streaming-llm" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project">
+                <h3>Kubernetes for Data Engineering</h3>
+                <p class="project-description">Deploys Apache Airflow on Kubernetes using Helm charts. Demonstrates container orchestration for scalable data workloads.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-k8s">Kubernetes</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Kubernetes-white?logo=kubernetes&logoColor=326CE5" alt="K8s">
+                    <img src="https://img.shields.io/badge/Helm-white?logo=helm&logoColor=0F1689" alt="Helm">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/Docker-white?logo=docker&logoColor=2496ED" alt="Docker">
+                </div>
+                <a href="https://github.com/rameezraja/Kubernetes-For-DataEngineering" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project">
+                <h3>YouTube Analytics Pipeline</h3>
+                <p class="project-description">Fetches real-time YouTube metrics (views, likes, comments), streams through Kafka, processes with ksqlDB, and sends alerts to Telegram.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/YouTube_API-white?logo=youtube&logoColor=FF0000" alt="YouTube">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/ksqlDB-white?logo=apachekafka&logoColor=231F20" alt="ksqlDB">
+                    <img src="https://img.shields.io/badge/Telegram-white?logo=telegram&logoColor=26A5E4" alt="Telegram">
+                </div>
+                <a href="https://github.com/rameezraja/YoutubeAnalytics" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project">
+                <h3>Apache Flink Sales Analytics</h3>
+                <p class="project-description">Real-time sales analytics using Apache Flink for stream processing. Sales transactions processed, aggregated, and visualised in Kibana dashboards.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Flink-white?logo=apacheflink&logoColor=E6526F" alt="Flink">
+                    <img src="https://img.shields.io/badge/Elasticsearch-white?logo=elasticsearch&logoColor=005571" alt="ES">
+                    <img src="https://img.shields.io/badge/Kibana-white?logo=kibana&logoColor=005571" alt="Kibana">
+                    <img src="https://img.shields.io/badge/Docker-white?logo=docker&logoColor=2496ED" alt="Docker">
+                </div>
+                <a href="https://github.com/rameezraja/ApacheFlink-SalesAnalytics" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="project">
+                <h3>Football Data Engineering (Azure)</h3>
+                <p class="project-description">Scrapes football data from Wikipedia, orchestrates with Airflow, stores in Azure Data Lake, and transforms with Azure Data Factory.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-azure">Azure</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/Azure_Data_Lake-white?logo=microsoftazure&logoColor=0078D4" alt="Azure">
+                    <img src="https://img.shields.io/badge/Data_Factory-white?logo=microsoftazure&logoColor=0078D4" alt="ADF">
+                    <img src="https://img.shields.io/badge/Python-white?logo=python&logoColor=3776AB" alt="Python">
+                </div>
+                <a href="https://github.com/rameezraja/FootballDataEngineering" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="project">
+                <h3>Change Data Capture Pipeline</h3>
+                <p class="project-description">Captures row-level changes from PostgreSQL in real-time using Debezium and streams them to Kafka for downstream processing.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Debezium-white?logo=debezium&logoColor=EE3124" alt="Debezium">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/PostgreSQL-white?logo=postgresql&logoColor=4169E1" alt="PostgreSQL">
+                    <img src="https://img.shields.io/badge/Docker-white?logo=docker&logoColor=2496ED" alt="Docker">
+                </div>
+                <a href="https://github.com/rameezraja/changecapture-e2e" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 10 -->
+            <div class="project">
+                <h3>Modern Data Engineering with dbt + Databricks</h3>
+                <p class="project-description">End-to-end lakehouse architecture on Azure using Databricks for compute, dbt for transformations, and Data Factory for orchestration.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-azure">Azure</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Databricks-white?logo=databricks&logoColor=FF3621" alt="Databricks">
+                    <img src="https://img.shields.io/badge/dbt-white?logo=dbt&logoColor=FF694B" alt="dbt">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/Delta_Lake-white?logo=delta&logoColor=00ADD8" alt="Delta">
+                </div>
+                <a href="https://github.com/rameezraja/modern-data-eng-dbt-databricks-azure" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 11 -->
+            <div class="project">
+                <h3>Airflow Spark Job Orchestration (SparkingFlow)</h3>
+                <p class="project-description">Demonstrates how to use Apache Airflow to submit jobs to a Spark cluster in multiple programming languages - Python, Scala, and Java.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/Python-white?logo=python&logoColor=3776AB" alt="Python">
+                    <img src="https://img.shields.io/badge/Scala-white?logo=scala&logoColor=DC322F" alt="Scala">
+                </div>
+                <a href="https://github.com/rameezraja/SparkingFlow" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 12 -->
+            <div class="project">
+                <h3>Smart City Real-time Data Streaming</h3>
+                <p class="project-description">End-to-end pipeline for Smart City initiative. Captures vehicle data, GPS, emergencies, weather from a simulated journey. Full AWS analytics stack.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-aws">AWS</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/S3-white?logo=amazons3&logoColor=569A31" alt="S3">
+                    <img src="https://img.shields.io/badge/Redshift-white?logo=amazonredshift&logoColor=8C4FFF" alt="Redshift">
+                </div>
+                <a href="https://github.com/rameezraja/SmartCity-Realtime-Data-Streaming" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 13 -->
+            <div class="project">
+                <h3>Real-time Data Warehouse with Pinot</h3>
+                <p class="project-description">Builds a real-time data warehouse using Apache Pinot for sub-second OLAP queries on streaming data, orchestrated by Airflow and visualised in Superset.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Pinot-white?logo=apache&logoColor=D22128" alt="Pinot">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/Redpanda-white?logo=redpanda&logoColor=E03C31" alt="Redpanda">
+                    <img src="https://img.shields.io/badge/Superset-white?logo=apachesuperset&logoColor=20A6C9" alt="Superset">
+                </div>
+                <a href="https://github.com/rameezraja/realtime-pinot-warehouse" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 14 -->
+            <div class="project">
+                <h3>Data Lakehouse with Apache Iceberg</h3>
+                <p class="project-description">Distributed lakehouse using Iceberg as table format, Trino for queries, and Nessie for Git-like data versioning. Medallion architecture with dbt.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Iceberg-white?logo=apacheiceberg&logoColor=4A90D9" alt="Iceberg">
+                    <img src="https://img.shields.io/badge/Trino-white?logo=trino&logoColor=DD00A1" alt="Trino">
+                    <img src="https://img.shields.io/badge/dbt-white?logo=dbt&logoColor=FF694B" alt="dbt">
+                    <img src="https://img.shields.io/badge/MinIO-white?logo=minio&logoColor=C72E49" alt="MinIO">
+                </div>
+                <a href="https://github.com/rameezraja/iceberg-lakehouse" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 15 -->
+            <div class="project">
+                <h3>Real-time Stock Market Anomaly Detection</h3>
+                <p class="project-description">End-to-end pipeline that detects anomalies in stock market data in real-time using machine learning models on streaming data.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/Python-white?logo=python&logoColor=3776AB" alt="Python">
+                    <img src="https://img.shields.io/badge/Docker-white?logo=docker&logoColor=2496ED" alt="Docker">
+                </div>
+                <a href="https://github.com/rameezraja/stock-anomaly-detection" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 16 -->
+            <div class="project">
+                <h3>AWS Flink vs Decodable Comparison</h3>
+                <p class="project-description">Hands-on comparison of stream processing platforms - AWS Managed Flink versus Decodable, implementing the same pipeline on both.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-aws">AWS</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Flink-white?logo=apacheflink&logoColor=E6526F" alt="Flink">
+                    <img src="https://img.shields.io/badge/AWS-white?logo=amazonaws&logoColor=FF9900" alt="AWS">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Docker-white?logo=docker&logoColor=2496ED" alt="Docker">
+                </div>
+                <a href="https://github.com/rameezraja/decodable-vs-aws-flink" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 17 -->
+            <div class="project">
+                <h3>Twitter Sentiment Analysis Pipeline</h3>
+                <p class="project-description">Real-time sentiment analysis on Twitter data. Streams tweets, processes through NLP models for sentiment scoring, visualises trends in Kibana.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Twitter_API-white?logo=twitter&logoColor=1DA1F2" alt="Twitter">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/Elasticsearch-white?logo=elasticsearch&logoColor=005571" alt="ES">
+                </div>
+                <a href="https://github.com/rameezraja/twitter-sentiment-pipeline" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 18 -->
+            <div class="project">
+                <h3>E-commerce Analytics with Snowflake</h3>
+                <p class="project-description">End-to-end analytics pipeline for e-commerce. Extracts from multiple sources, loads into Snowflake, transforms with dbt into dimensional models.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-snowflake">Snowflake</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Snowflake-white?logo=snowflake&logoColor=29B5E8" alt="Snowflake">
+                    <img src="https://img.shields.io/badge/dbt-white?logo=dbt&logoColor=FF694B" alt="dbt">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/S3-white?logo=amazons3&logoColor=569A31" alt="S3">
+                </div>
+                <a href="https://github.com/rameezraja/ecommerce-snowflake-analytics" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 19 -->
+            <div class="project">
+                <h3>Crypto Price Tracker Pipeline</h3>
+                <p class="project-description">Real-time cryptocurrency price tracking. Ingests from crypto exchanges, processes aggregations, displays live Grafana dashboards.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/CoinGecko-white?logo=coingecko&logoColor=8DC63F" alt="CoinGecko">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/Grafana-white?logo=grafana&logoColor=F46800" alt="Grafana">
+                </div>
+                <a href="https://github.com/rameezraja/crypto-price-tracker" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 20 -->
+            <div class="project">
+                <h3>GCP Data Pipeline with BigQuery</h3>
+                <p class="project-description">End-to-end pipeline on Google Cloud. Ingests into Cloud Storage, processes with Dataflow, loads into BigQuery, visualises in Looker Studio.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-gcp">GCP</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/BigQuery-white?logo=googlebigquery&logoColor=669DF6" alt="BigQuery">
+                    <img src="https://img.shields.io/badge/Dataflow-white?logo=googlecloud&logoColor=4285F4" alt="Dataflow">
+                    <img src="https://img.shields.io/badge/dbt-white?logo=dbt&logoColor=FF694B" alt="dbt">
+                    <img src="https://img.shields.io/badge/Looker-white?logo=looker&logoColor=4285F4" alt="Looker">
+                </div>
+                <a href="https://github.com/rameezraja/gcp-bigquery-pipeline" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 21 -->
+            <div class="project">
+                <h3>Uber-style Ride Analytics</h3>
+                <p class="project-description">Simulates ride-hailing analytics. Processes real-time ride requests, driver locations, computes metrics like surge pricing and driver availability.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/Redis-white?logo=redis&logoColor=DC382D" alt="Redis">
+                    <img src="https://img.shields.io/badge/Cassandra-white?logo=apachecassandra&logoColor=1287B1" alt="Cassandra">
+                </div>
+                <a href="https://github.com/rameezraja/uber-ride-analytics" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 22 -->
+            <div class="project">
+                <h3>Weather Data Pipeline</h3>
+                <p class="project-description">Batch pipeline that collects weather data from multiple cities, stores historical records, and provides analytics on temperature trends.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/OpenWeatherMap-white?logo=openweathermap&logoColor=EB6E4B" alt="Weather">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/dbt-white?logo=dbt&logoColor=FF694B" alt="dbt">
+                    <img src="https://img.shields.io/badge/Metabase-white?logo=metabase&logoColor=509EE3" alt="Metabase">
+                </div>
+                <a href="https://github.com/rameezraja/weather-data-pipeline" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 23 -->
+            <div class="project">
+                <h3>Log Analytics with ELK Stack</h3>
+                <p class="project-description">Centralised log analytics using ELK stack. Collects logs from applications, parses and enriches them, provides searchable dashboards.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Elasticsearch-white?logo=elasticsearch&logoColor=005571" alt="ES">
+                    <img src="https://img.shields.io/badge/Logstash-white?logo=logstash&logoColor=005571" alt="Logstash">
+                    <img src="https://img.shields.io/badge/Kibana-white?logo=kibana&logoColor=005571" alt="Kibana">
+                    <img src="https://img.shields.io/badge/Filebeat-white?logo=beats&logoColor=005571" alt="Filebeat">
+                </div>
+                <a href="https://github.com/rameezraja/elk-log-analytics" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 24 -->
+            <div class="project">
+                <h3>CI/CD for Data Pipelines</h3>
+                <p class="project-description">Implements CI/CD practices for data pipelines. Automates testing, deployment, and infrastructure provisioning.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/GitHub_Actions-white?logo=githubactions&logoColor=2088FF" alt="Actions">
+                    <img src="https://img.shields.io/badge/Terraform-white?logo=terraform&logoColor=7B42BC" alt="Terraform">
+                    <img src="https://img.shields.io/badge/dbt-white?logo=dbt&logoColor=FF694B" alt="dbt">
+                    <img src="https://img.shields.io/badge/Great_Expectations-white?logo=greatexpectations&logoColor=FF6310" alt="GE">
+                </div>
+                <a href="https://github.com/rameezraja/data-pipeline-cicd" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 25 -->
+            <div class="project">
+                <h3>Movie Recommendation Pipeline</h3>
+                <p class="project-description">Batch ML pipeline that trains collaborative filtering models on movie ratings and serves recommendations via REST API.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Spark_MLlib-white?logo=apachespark&logoColor=E25A1C" alt="MLlib">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/FastAPI-white?logo=fastapi&logoColor=009688" alt="FastAPI">
+                    <img src="https://img.shields.io/badge/PostgreSQL-white?logo=postgresql&logoColor=4169E1" alt="PostgreSQL">
+                </div>
+                <a href="https://github.com/rameezraja/movie-recommendation-pipeline" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 26 -->
+            <div class="project">
+                <h3>Real-time Fraud Detection AI</h3>
+                <p class="project-description">End-to-end ML system that detects fraudulent transactions in real-time. Streams data, applies ML models, flags suspicious activity.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Kafka-white?logo=apachekafka&logoColor=231F20" alt="Kafka">
+                    <img src="https://img.shields.io/badge/Spark-white?logo=apachespark&logoColor=E25A1C" alt="Spark">
+                    <img src="https://img.shields.io/badge/Scikit--learn-white?logo=scikitlearn&logoColor=F7931E" alt="sklearn">
+                    <img src="https://img.shields.io/badge/FastAPI-white?logo=fastapi&logoColor=009688" alt="FastAPI">
+                </div>
+                <a href="https://github.com/rameezraja/fraud-detection-ai" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 27 -->
+            <div class="project">
+                <h3>Sales Forecasting AI Pipeline</h3>
+                <p class="project-description">End-to-end ML pipeline for retail sales forecasting. Trains time-series models, generates predictions, serves via API and Streamlit dashboard.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/Prophet-white?logo=meta&logoColor=0081FB" alt="Prophet">
+                    <img src="https://img.shields.io/badge/XGBoost-white?logo=xgboost&logoColor=189FDD" alt="XGBoost">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/Streamlit-white?logo=streamlit&logoColor=FF4B4B" alt="Streamlit">
+                </div>
+                <a href="https://github.com/rameezraja/sales-forecasting-ai" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 28 -->
+            <div class="project">
+                <h3>Customer Churn Prediction AI</h3>
+                <p class="project-description">End-to-end MLOps pipeline for predicting customer churn. Tracks experiments with MLflow, serves predictions via FastAPI.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-docker">Docker</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/XGBoost-white?logo=xgboost&logoColor=189FDD" alt="XGBoost">
+                    <img src="https://img.shields.io/badge/MLflow-white?logo=mlflow&logoColor=0194E2" alt="MLflow">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/FastAPI-white?logo=fastapi&logoColor=009688" alt="FastAPI">
+                </div>
+                <a href="https://github.com/rameezraja/churn-prediction-ai" class="view-code">View code on GitHub →</a>
+            </div>
+
+            <!-- Project 29 -->
+            <div class="project">
+                <h3>Self-Healing Data Pipeline</h3>
+                <p class="project-description">Intelligent pipeline that automatically detects, diagnoses, and fixes data quality issues using LLMs. AI analyses and corrects problematic records.</p>
+                <div class="project-tags">
+                    <span class="project-tag tag-de">Data Engineering</span>
+                    <span class="project-tag tag-gcp">GCP</span>
+                </div>
+                <div class="badges">
+                    <img src="https://img.shields.io/badge/GPT--4-white?logo=openai&logoColor=412991" alt="GPT-4">
+                    <img src="https://img.shields.io/badge/Airflow-white?logo=apacheairflow&logoColor=017CEE" alt="Airflow">
+                    <img src="https://img.shields.io/badge/BigQuery-white?logo=googlebigquery&logoColor=669DF6" alt="BigQuery">
+                    <img src="https://img.shields.io/badge/Cloud_Storage-white?logo=googlecloud&logoColor=4285F4" alt="GCS">
+                </div>
+                <a href="https://github.com/rameezraja/self-healing-pipeline" class="view-code">View code on GitHub →</a>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
