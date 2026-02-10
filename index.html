@@ -154,8 +154,82 @@
         .intro-text {
             font-size: 15px;
             color: #586069;
-            margin-bottom: 30px;
+            margin-bottom: 16px;
             line-height: 1.6;
+        }
+        .intro-section {
+            margin-bottom: 40px;
+        }
+        .journey-section {
+            margin-bottom: 40px;
+        }
+        .journey-section h2 {
+            margin-bottom: 25px;
+        }
+        .journey-phase {
+            background: #f6f8fa;
+            border-left: 4px solid #0366d6;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 0 6px 6px 0;
+        }
+        .journey-phase:nth-child(3) {
+            border-left-color: #28a745;
+        }
+        .journey-phase:nth-child(4) {
+            border-left-color: #6f42c1;
+        }
+        .journey-phase:nth-child(5) {
+            border-left-color: #d73a49;
+        }
+        .phase-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .phase-number {
+            background: #0366d6;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 12px;
+        }
+        .journey-phase:nth-child(3) .phase-number {
+            background: #28a745;
+        }
+        .journey-phase:nth-child(4) .phase-number {
+            background: #6f42c1;
+        }
+        .journey-phase:nth-child(5) .phase-number {
+            background: #d73a49;
+        }
+        .phase-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #24292e;
+        }
+        .phase-date {
+            margin-left: auto;
+            font-size: 13px;
+            color: #586069;
+            font-weight: 500;
+        }
+        .phase-tech {
+            font-size: 13px;
+            color: #586069;
+            margin-bottom: 10px;
+        }
+        .phase-hook {
+            font-size: 15px;
+            color: #24292e;
+            font-style: italic;
+            margin: 0;
         }
         hr {
             border: 0;
@@ -174,20 +248,64 @@
         <header>
             <img src="images/linkedin.jpg" alt="Rameez Raja">
             <h1><a href="https://rameezraja.github.io/">Rameez Raja</a></h1>
-            <p>Data Engineer & ML Practitioner with 10+ years in banking, life sciences, and civic tech. Two masters degrees in statistics and predictive modelling. Building skills through hands-on projects.</p>
-            <p>Currently: ML Researcher at University of Warwick</p>
+            <p>Data engineer. Problem solver. Lifelong learner. 10+ years building pipelines and dashboards across three continents.</p>
+            
             <div class="nav-links">
-                <a href="https://www.linkedin.com/in/rameezraja/">View my LinkedIn Profile</a>
                 <a href="cv.html">View my CV</a>
                 <a href="research.html">View my Learning Blog</a>
             </div>
         </header>
         
         <section>
-            <p class="intro-text">Let me show you how one question changed everything. I was an Operations Analyst asking "why does this take so long?" That curiosity pulled me into automation, then data pipelines, then a decade of building systems across banking in New York and Dubai, life sciences in Cambridge, and civic tech in San Francisco.</p>
+            <div class="intro-section">
+                <p class="intro-text"><strong>Hi, I'm Rameez</strong> (pronounced Rah-meez). I'm a data engineer, storyteller, and system builder.</p>
+                
+                <p class="intro-text">I've spent the last 10+ years helping organisations make sense of messy, complex data - not just through pipelines and dashboards, but through human-centred design.</p>
+                
+                <p class="intro-text">This site is my way of sharing what I've learned - from 2AM pipeline disasters to building AI-powered systems that serve real people. I hope these stories help you build better data systems - and see the meaning behind the code.</p>
+            </div>
+
+            <div class="journey-section">
+                <h2>My Journey</h2>
+                
+                <div class="journey-phase">
+                    <div class="phase-header">
+                        <span class="phase-number">1</span>
+                        <span class="phase-title">The Analyst</span>
+                    </div>
+                    <div class="phase-tech">Excel • SQL • Python • Tableau</div>
+                    <p class="phase-hook">"This is where I learned to listen to the data."</p>
+                </div>
+
+                <div class="journey-phase">
+                    <div class="phase-header">
+                        <span class="phase-number">2</span>
+                        <span class="phase-title">The Engineer</span>
+                    </div>
+                    <div class="phase-tech">Airflow • Snowflake • dbt • GCP</div>
+                    <p class="phase-hook">"I started building the invisible roads data travels on."</p>
+                </div>
+
+                <div class="journey-phase">
+                    <div class="phase-header">
+                        <span class="phase-number">3</span>
+                        <span class="phase-title">The Storyteller</span>
+                    </div>
+                    <div class="phase-tech">React • Tableau • D3.js • Web Dev</div>
+                    <p class="phase-hook">"I wanted data to be not just available - but understood."</p>
+                </div>
+
+                <div class="journey-phase">
+                    <div class="phase-header">
+                        <span class="phase-number">4</span>
+                        <span class="phase-title">The Architect</span>
+                    </div>
+                    <div class="phase-tech">ML • LLMs • MLOps • AI Systems</div>
+                    <p class="phase-hook">"Now I ask: how can we design intelligent systems that serve people?"</p>
+                </div>
+            </div>
 
             <h2>Learning Portfolio</h2>
-            <p class="intro-text">Selected projects in data engineering, streaming systems, and cloud platforms.</p>
 
             <!-- Project 1 -->
             <div class="project">
